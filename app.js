@@ -30,7 +30,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ extended: false, limit: '50mb' }));
 app.use(cookieParser());
-app.use(require('stylus').middleware(path.join(__dirname, 'public')));
+app.use(stylus.middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600 }));
 
 app.use(session({
