@@ -53,7 +53,7 @@ gulp.task('webpack-nodemon', () => {
         .on('error', () => {
             console.log('error is frontend script.');
         })
-        .pipe(gulp.dest('dist/javascripts/'))
+        .pipe(gulp.dest('dist/public/javascripts/'))
         .on('end', () => {
             nodemon({
                 script: 'dist/app.js',
@@ -82,13 +82,13 @@ gulp.task('webpack', () => {
         .on('error', () => {
             console.log('error is frontend script.');
         })
-        .pipe(gulp.dest('dist/javascripts/'));
+        .pipe(gulp.dest('dist/public/javascripts/'));
 });
 gulp.task('js-watch', ['webpack']);//, browserSync.reload);
 gulp.task('styl', () => {
     return gulp.src('public/stylesheets/*.styl')
         .pipe(stylus())
-        .pipe(gulp.dest('dist/stylesheets/'))
+        .pipe(gulp.dest('dist/public/stylesheets/'))
         .pipe(browserSync.stream())
         .on("error", () => {});
 });

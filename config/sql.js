@@ -77,19 +77,19 @@ module.exports = class Database{
     devDB(){
         return {
             connectionLimit: 20,
-            host: "localhost",
-            user: "root",
-            password: "sesgidvu",
-            database: "shompass",
+            host: "",
+            user: "",
+            password: "",
+            database: "",
         };
     }
     prodDB(){
         return {
             connectionLimit: 20,
-            host: "shpmpass.com",
-            user: "myuser",
-            password: "Sesgidvu1!",
-            database: "shompass",
+            host: "",
+            user: "",
+            password: "",
+            database: "",
         };
     }
     log(obj){

@@ -1,7 +1,7 @@
 {
-  "name": "Shompass",
+  "name": "ES6 Express App",
   "version": "0.0.1",
-  "description": "A web app that allows to search products and find the nearest sellers.",
+  "description": "A way to clone and start a new app with all the cool things.",
   "private": true,
   "main": "app.js",
   "author": "Ryan Soury",

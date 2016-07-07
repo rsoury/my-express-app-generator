@@ -6,11 +6,9 @@ module.exports = {
     devtool: debug ? "inline-sourcemap" : null,
     entry: {
         "scripts" : "./public/javascripts/scripts.js",
-        "linkscript" : "./public/javascripts/linkscript.js",
-        //"csrf": './public/javascripts/csrf.js'
     },
     output: {
-        path: __dirname + "/public/javascripts",
+        path: __dirname + "dist/public/javascripts",
         filename: "[name].min.js", //"scripts.min.js"
     },
     module: {

@@ -24,13 +24,14 @@ app.set('sql', sql);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-app.use(favicon(path.join(__dirname, 'dist', 'favicon.ico')));
+//app.js is being run from the dist folder.
+app.use(favicon(path.join(__dirname, 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ extended: false, limit: '50mb' }));
 app.use(cookieParser());
-app.use(require('stylus').middleware(path.join(__dirname, 'dist')));
-app.use(express.static(path.join(__dirname, 'dist'), { maxAge: 31557600 }));
+app.use(require('stylus').middleware(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600 }));
 
 app.use(session({
   secret: 'IActuallyAmStartingToBelieveThisSecretIsImportant',
